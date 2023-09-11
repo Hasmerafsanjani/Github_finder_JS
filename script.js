@@ -3,11 +3,17 @@ console.log("script file linked");
 const searchbar = document.getElementById("searchbar");
 const cardcontainer = document.getElementById("cardcontainer")
 const searchButton = document.getElementById("searchBtn")
+const getAllusers = document.getElementById("getAllusers")
 
 searchButton.addEventListener("click", (ele) => {
     ele.preventDefault(); 
     const searchValue = searchbar.value
     getUsers(searchValue)
+})
+getAllusers.addEventListener("click", (ele) => {
+    ele.preventDefault(); 
+    cardcontainer.innerHTML=""
+    getUsers()
 })
 
   function getUsers(searchValue){
